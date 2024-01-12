@@ -1,0 +1,38 @@
+﻿@model User
+
+@{
+    ViewData["Title"] = "CREATE NEW USER";
+
+
+
+}
+
+<h1 class="bg-info text-white">Create New User</h1>
+
+<a asp-action="Index" class="btn btn-secondary">User List</a>
+
+<div asp-validation-summary="All" class="text-danger"></div> 
+
+
+<form asp-action="Create" method="post">
+
+
+    <div class="form-group">
+
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control"  />
+
+        <label asp-for="Email"></label>
+        <input asp-for="Email" class="form-control" />
+
+        <label asp-for="Password"></label>
+        <input asp-for="Password" class="form-control" />
+
+
+
+    </div>
+    <button type="submit" class="btn btn-primary">Create User</button>
+
+
+
+</form>
